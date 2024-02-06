@@ -51,14 +51,70 @@ public class BuyiRefrigeratorPage extends BasePage {
         BuyNow.click();
     }
 
-    @FindBy(css = "label[for='input-account-guest']")
-    private WebElement GuestCheckout;
+    @FindBy(css = "#form-checkout > div > div.col-lg-5.mb-5.mb-lg-0 > div > div:nth-child(1) > div > div:nth-child(1)")
+    private WebElement LogIn;
 
-    public void ClickOnGuestCheckout() {
-//        GuestCheckout.click();
-        Actions action = new Actions(driver);
-        action.moveToElement(GuestCheckout);
-        action.click().build().perform();
+    public void ClickOnLogIn() {
+        LogIn.click();
     }
+
+    @FindBy(css = "#input-login-email")
+    private WebElement Email;
+
+    public void typeEmailField(String text) {
+        Email.sendKeys(text);
+    }
+
+    @FindBy(css = "#input-login-password")
+    private WebElement Password;
+
+    public void typePasswordField(String text) {
+        Password.sendKeys(text);
+    }
+
+    @FindBy(css = ".clearfix >#button-login")
+    private WebElement LogInButton;
+
+    public void ClickOnLogInButton() {
+        LogInButton.click();
+    }
+
+    @FindBy(xpath = "//*[@id=\"input-payment-firstname\"]")
+    private WebElement FirstName;
+
+    public void typeFirstName(String text) {
+        FirstName.sendKeys(text);
+    }
+    @FindBy(css = "#input-payment-lastname")
+    private WebElement LastName;
+    public void typeLastName(String text){
+        LastName.sendKeys(text);
+    }
+    @FindBy(css = "#input-payment-address-1")
+    private WebElement Address;
+    public void typeAddress(String text){
+        Address.sendKeys(text);
+    }
+    @FindBy(css = "input-payment-city")
+    private WebElement City;
+    public void typeCity(String text){
+        City.sendKeys(text);
+    }
+    @FindBy(css = "#input-payment-postcode")
+    private WebElement PostCode;
+    public void typePostCode(String text){
+        PostCode.sendKeys(text);
+    }
+    @FindBy(css = "input-comment")
+    private WebElement Comment;
+    public void typeComment(String text){
+        Comment.sendKeys(text);
+    }
+
+
 }
+
+
+
+
 
