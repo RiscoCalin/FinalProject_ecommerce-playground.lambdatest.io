@@ -51,14 +51,51 @@ public class BuyiRefrigeratorPage extends BasePage {
         BuyNow.click();
     }
 
-    @FindBy(css = "label[for='input-account-guest']")
-    private WebElement GuestCheckout;
-
-    public void ClickOnGuestCheckout() {
-//        GuestCheckout.click();
-        Actions action = new Actions(driver);
-        action.moveToElement(GuestCheckout);
-        action.click().build().perform();
+    @FindBy(css = "#input-payment-firstname")
+    private WebElement FirstName;
+    public void typeFirstName(String text) {
+        FirstName.sendKeys(text);
     }
+    @FindBy(css = "#input-payment-lastname")
+    private WebElement LastName;
+    public void typeLastName(String text) {
+        LastName.sendKeys(text);
+    }
+    @FindBy(css = "#input-payment-email")
+    private WebElement Email;
+    public void typeEmail(String text){
+        Email.sendKeys(text);
+    }
+     @FindBy(css = "#input-payment-telephone")
+    private WebElement Telephone;
+    public void typeTelephone(String text){
+        Telephone.sendKeys(text);
+    }
+    @FindBy(css = "#input-payment-address-1")
+    private WebElement Address;
+    public void typeAddress(String text){
+        Address.sendKeys(text);
+    }
+    @FindBy(css = "#input-payment-city")
+    private WebElement City;
+    public void typeCity(String text){
+        City.sendKeys(text);
+
+    }@FindBy(css = "#input-payment-postcode")
+    private WebElement PostCode;
+    public void typePostCode(String text){
+        PostCode.sendKeys(text);
+    }
+    @FindBy(css = "#input-payment-country > option:nth-child(186)")
+    private WebElement Country;
+    public void typeCountry(){
+        Country.click();
+    }
+    @FindBy(css = "option[value=\"2703\"]")
+    private WebElement Region;
+    public void typeRegion(){
+        Region.click();
+    }
+
 }
 
