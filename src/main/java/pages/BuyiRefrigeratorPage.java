@@ -85,34 +85,77 @@ public class BuyiRefrigeratorPage extends BasePage {
     public void typeFirstName(String text) {
         FirstName.sendKeys(text);
     }
+
     @FindBy(css = "#input-payment-lastname")
     private WebElement LastName;
-    public void typeLastName(String text){
+
+    public void typeLastName(String text) {
         LastName.sendKeys(text);
     }
+
     @FindBy(css = "#input-payment-address-1")
     private WebElement Address;
-    public void typeAddress(String text){
+
+    public void typeAddress(String text) {
         Address.sendKeys(text);
     }
-    @FindBy(css = "input-payment-city")
+
+    @FindBy(css = "#input-payment-city")
     private WebElement City;
-    public void typeCity(String text){
+
+    public void typeCity(String text) {
         City.sendKeys(text);
     }
+
     @FindBy(css = "#input-payment-postcode")
     private WebElement PostCode;
-    public void typePostCode(String text){
+
+    public void typePostCode(String text) {
         PostCode.sendKeys(text);
     }
-    @FindBy(css = "input-comment")
+
+    @FindBy(css = "#input-comment")
     private WebElement Comment;
-    public void typeComment(String text){
+
+    public void typeComment(String text) {
         Comment.sendKeys(text);
     }
 
+    @FindBy(css = "#form-checkout > div > div.col-lg-7.mb-5.mb-lg-0 > div > div:nth-child(6) > label")
+    private WebElement Agree;
 
+    public void ClickOnAgree() {
+        Agree.click();
+    }
+
+    @FindBy(css = ".sticky-top >.btn")
+    private WebElement MoveToContinue;
+
+    public void setMouseOverContinue() {
+        Actions action = new Actions(driver);
+        action.moveToElement(MoveToContinue).perform();
+
+    }
+
+    @FindBy(css = "#button-save > i")
+    private WebElement Continue;
+
+    public void ClickOnContinue() {
+        Actions action = new Actions(driver);
+        action.moveToElement(Continue).click().build().perform();
+    }
+
+    @FindBy(css = ".buttons >#button-confirm")
+    private WebElement Confirm;
+
+    public void clickConfirm() {
+        Confirm.click();
+    }
 }
+
+
+
+
 
 
 
