@@ -51,7 +51,7 @@ public class BuyiRefrigeratorTests extends BasePage {
         WebElement confirm = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".buttons >#button-confirm")));
         buyiRefrigeratorPage.clickConfirm();
 
-        WebElement element = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[1]/div/div/h1"));
+        WebElement element = driver.findElement(By.cssSelector("#content > h1"));
         // Get the text of the element
         String actualResult = element.getText();
         // Define the expected result
@@ -63,7 +63,7 @@ public class BuyiRefrigeratorTests extends BasePage {
 
 }
 
-//driver.findElement(applePageLink).click();
+
 
 
 

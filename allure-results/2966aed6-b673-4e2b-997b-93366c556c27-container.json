@@ -1,0 +1,1 @@
+{"uuid":"2966aed6-b673-4e2b-997b-93366c556c27","name":"BuyiRefrigeratorTests","children":["bdd5944e-bc4b-4a0a-9ce3-4754ea937595"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707319434627,"stop":1707319437712}],"afters":[],"start":1707319434602,"stop":1707319445617}
