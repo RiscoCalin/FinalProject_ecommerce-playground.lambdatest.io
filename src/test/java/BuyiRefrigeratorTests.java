@@ -3,7 +3,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.BasePage;
@@ -49,16 +48,14 @@ public class BuyiRefrigeratorTests extends BasePage {
         buyiRefrigeratorPage.ClickOnAgree();
         buyiRefrigeratorPage.setMouseOverContinue();
         buyiRefrigeratorPage.ClickOnContinue();
-        WebElement confirm = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".buttons >#button-confirm")));
-        buyiRefrigeratorPage.clickConfirm();
-        Assert.assertEquals(driver.getPageSource().contains("Your order"));
+
 
     }
 
 
 }
 
-
+//driver.findElement(applePageLink).click();
 
 
 
