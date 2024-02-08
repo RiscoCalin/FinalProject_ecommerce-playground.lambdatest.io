@@ -1,0 +1,1 @@
+{"uuid":"dcdb08b3-bfdd-44d2-88e8-639f88e2683c","name":"SearchForCameraTests.setUp","children":["7404f254-d0f8-495b-be6b-7387e0ad8c15"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707390012356,"stop":1707390015631}],"afters":[],"start":1707390012355,"stop":1707390015632}

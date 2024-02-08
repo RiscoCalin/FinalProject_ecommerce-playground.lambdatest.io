@@ -27,7 +27,7 @@ public class BasePage {
         driver.get(BASE_URL);
     }
 
-    @AfterMethod//foloseste @AfterMethod daca vrem
+  /*  @AfterMethod//foloseste @AfterMethod daca vrem
     //sa inchide browserul dupa test care in parte
     public void tearDown() {
         driver.quit();
@@ -35,6 +35,6 @@ public class BasePage {
                 driver.quit();
 
             }
-        }
+        }*/
     }
 
