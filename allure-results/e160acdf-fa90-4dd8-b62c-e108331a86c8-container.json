@@ -1,0 +1,1 @@
+{"uuid":"e160acdf-fa90-4dd8-b62c-e108331a86c8","name":"AppleCinema30Tests.setUp","children":["e67c1f58-5e47-4494-8016-59c3aceac07d"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707569332598,"stop":1707569335787}],"afters":[],"start":1707569332598,"stop":1707569335787}

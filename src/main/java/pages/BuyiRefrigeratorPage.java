@@ -37,7 +37,7 @@ public class BuyiRefrigeratorPage extends BasePage {
         action.click().build().perform();
     }
 
-    @FindBy(css = "#mz-product-grid-image-40-212439 > div > div.carousel-item.active > img")
+    @FindBy(css = "#mz-product-grid-image-55-212439 > div > div.carousel-item.active > img")
     private WebElement iRefrigerator;
 
     public void ClickOnIRefrigerator() {
