@@ -1,0 +1,1 @@
+{"uuid":"9c8a08d1-2cef-4026-a1a3-2643ce6b101b","name":"CheckSofwareTests.setUp","children":["0aa2670e-62dc-480b-bf1f-f99c217cc32e"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707680183454,"stop":1707680186837}],"afters":[],"start":1707680183454,"stop":1707680186837}

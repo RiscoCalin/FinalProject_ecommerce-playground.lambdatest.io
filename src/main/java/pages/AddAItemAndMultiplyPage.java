@@ -11,7 +11,7 @@ public class AddAItemAndMultiplyPage extends BasePage {
         super(driver);
         PageFactory.initElements(driver, this);
     }
-    @Description("Increase the number of IMac")
+
     @FindBy(css = "#mz-product-listing-image-37213259-0-0 >.carousel-inner>.active>.lazy-load")
     private WebElement IMac;
     public void ClickOnIMac() {
