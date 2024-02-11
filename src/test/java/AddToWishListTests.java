@@ -19,7 +19,7 @@ public class AddToWishListTests extends BasePage {
         super.setUp();
         addToWishListPage = new AddToWishListPage(driver);
     }
-    @Test
+    @Test(priority = 1)
     public void AddToWishList() {
         addToWishListPage.ClickOnMyAccountBox();
         addToWishListPage.typeEmailField("riscocalin@gmail.com");
@@ -50,7 +50,7 @@ public class AddToWishListTests extends BasePage {
 
     }
     @Description("Remove one product from wish list")
-    @Test
+    @Test(priority = 2)
     public void RemoveFromWishList() {
         addToWishListPage.ClickOnMyAccountBox();
         addToWishListPage.typeEmailField("riscocalin@gmail.com");

@@ -93,6 +93,37 @@ public class AppleCinema30Page extends BasePage {
     public void ClickOnWriteReview(){
         WriteReview.click();
     }
+    @FindBy(css = "#entry_216850 >.icon-left")
+    private WebElement AskQuestion;
+    public void ClickOnAskQuestion(){
+        AskQuestion.click();
+    }
+    @FindBy(css = "#entry_216873 > div > form > div:nth-child(1) > input")
+    private WebElement YourName;
+    public void InputYourName(String text){
+        YourName.sendKeys(text);
+    }
+    @FindBy(css = "#entry_216873 > div > form > div:nth-child(2) > input")
+    private WebElement YourEmail;
+    public void InputYourEmail(String text){
+        YourEmail.sendKeys(text);
+    }
+    @FindBy(css = "#entry_216873 > div > form > div:nth-child(3) > input")
+    private WebElement Subject;
+    public void InputSubject(String text){
+        Subject.sendKeys(text);
+    }
+    @FindBy(css = "#entry_216873 > div > form > div:nth-child(4) > textarea")
+    private WebElement Mesage;
+    public void InputMesage(String text){
+        Mesage.sendKeys(text);
+    }
+    @FindBy(css = "#entry_216873 > div > form > button")
+    private WebElement SendMessage;
+    public void ClickOnSendMessage(){
+        SendMessage.click();
+    }
+
 
 
 

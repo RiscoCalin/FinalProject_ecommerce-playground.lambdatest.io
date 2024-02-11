@@ -126,10 +126,48 @@ public class AppleCinema30Tests extends BasePage {
         Assert.assertEquals(actualText, expectedText);
 
     }
+    @Description("Test ask a question")
+    @Test//-mai este si ask a question
+    public void AppleCinema30AskQuestion() {
+        appleCinema30Page.HoverOverMegaMenu();
+        appleCinema30Page.HoverOverMegaMenuAndClickAppleSection();
+        appleCinema30Page.clickOnAppleCinema30();
+        appleCinema30Page.ClickOnAskQuestion();
+        Duration timeout = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebElement YourName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#entry_216873 > div > form > div:nth-child(1) > input")));
+        appleCinema30Page.InputYourName("Test");
+        appleCinema30Page.InputYourEmail("Test@test.com");
+        appleCinema30Page.InputSubject("De ce?");
+        appleCinema30Page.InputMesage("De ce nu avem frigiderul plin de bere?");
+        appleCinema30Page.ClickOnSendMessage();
+        WebElement Notification = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div.alert.alert-success.alert-notification.w-50.alert-dismissible")));
+        WebElement element = driver.findElement(By.cssSelector("body > div.alert.alert-success.alert-notification.w-50.alert-dismissible"));
+        String actualText = element.getText();
+        String expectedText = "Your enquiry has been successfully sent to the store owner!";
+        Assert.assertTrue(actualText.contains(expectedText));
+
+    }
+    @Description("Test the Stock")
+    @Test//-mai este si stock
+    public void AppleCinema30Stock() throws InterruptedException {
+
+        appleCinema30Page.HoverOverMegaMenu();
+        appleCinema30Page.HoverOverMegaMenuAndClickAppleSection();
+        appleCinema30Page.clickOnAppleCinema30();
+        Duration timeout = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebElement stock = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#entry_216826 > ul > li:nth-child(4) > span.badge.badge-success")));
+        WebElement stock0 = driver.findElement(By.cssSelector("#entry_216826 > ul > li:nth-child(4) > span.badge.badge-success"));
+        String actualStock = stock0.getText();
+        String expectedStock = "In Stock";
+        Assert.assertTrue(actualStock.contains(expectedStock));
+    }
+
+
 
 }
 
 
 
-//-mai este si ask a question
-//-si daca mai este in setoc
+
