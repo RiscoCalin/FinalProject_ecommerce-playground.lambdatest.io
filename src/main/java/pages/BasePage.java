@@ -3,8 +3,6 @@ package pages;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
 public class BasePage {
@@ -27,14 +25,14 @@ public class BasePage {
         driver.get(BASE_URL);
     }
 
-    @AfterMethod//foloseste @AfterMethod daca vrem
-    //sa inchide browserul dupa test care in parte
+    /*@AfterMethod
+
     public void tearDown() {
         driver.quit();
         if (driver != null) {
             driver.quit();
 
         }
-    }
+    }*/
 }
 
